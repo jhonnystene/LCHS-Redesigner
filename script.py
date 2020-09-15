@@ -14,11 +14,11 @@ ct = 0 # What text to edit
 while True:
 	display.fill((255, 255, 255)) # Clear screen
 	
-	display.blit(lchsLogo, (400 - (lchsLogo.get_rect().width / 2), 10)) # Draw logo image
+	display.blit(lchsLogo, (400 - int(lchsLogo.get_rect().width / 2), 10)) # Draw logo image
 	t = lchsFont.render(text, True, (0, 0, 0)) # Render text
-	display.blit(t, (400 - (t.get_rect().width / 2) - 10, 225)) # Draw text
+	display.blit(t, (400 - int(t.get_rect().width / 2) - 10, 225)) # Draw text
 	t2 = lchsFontSmall.render(text2, True, (209, 68, 52))
-	display.blit(t2, (400 - (t2.get_rect().width / 2) - 10, 305))
+	display.blit(t2, (400 - int(t2.get_rect().width / 2) - 10, 305))
  	
 	for event in pygame.event.get(): # Handle events
 		if(event.type == QUIT): # Quit event
